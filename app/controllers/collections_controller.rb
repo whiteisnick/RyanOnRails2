@@ -10,6 +10,8 @@ class CollectionsController < ApplicationController
   # GET /collections/1
   # GET /collections/1.json
   def show
+    @collection = Collection.find(params[:id])
+  	@entries = @collection.entries
   end
 
   # GET /collections/new
