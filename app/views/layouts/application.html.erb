@@ -48,7 +48,7 @@
         <a class="navbar-brand" href="/">Ryan Riddle Comics</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <% Collection.all.each do |collection| %>
+            <% Collection.all.reverse_each do |collection| %>
             <li><%= link_to collection.name, collection  %></li>
             <% end %>
           </ul>

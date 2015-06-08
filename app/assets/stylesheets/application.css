@@ -31,5 +31,10 @@ body {
   padding-top: 8px;
 }
 .feature {
-
+  text-align: center;
+  border: 2px solid #A6DECB;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  margin: 10px;
+  padding: 10px;
 }

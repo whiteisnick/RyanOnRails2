@@ -33,16 +33,20 @@
 -->
 <div class="row">
   <% @collections.each do |collection| %>
-    <div class="col-xs-6 feature">
-      <div class="row">
-        <h1><%= collection.name %></h1>
-        <div class="col-xs-6">
-          <img class="img-responsive" src=<%= collection.imgurl %> alt="" />  
-        </div>
-        <p>
-          <%= collection.description %>
-        </p>
-      </div>
-    </div>
+    <div class="col-xs-6">
+      <div class="feature">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <%= link_to image_tag(collection.imgurl, :class => 'img-responsive img-rounded'), collection %>
+          </div>
+          <div class="col-xs-12">
+            <h4><%= collection.name %></h4>
+            <p>
+              <%= collection.description %>
+            </p>
+          </div> <!-- /col -->
+        </div> <!-- /row -->
+      </div> <!-- /feature -->
+    </div> <!-- /col -->
   <% end %>
 </div>
