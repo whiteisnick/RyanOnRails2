@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<!--
 <h1>Listing Collections</h1>
 
 <table class="table">
@@ -29,3 +29,20 @@
 <br>
 
 <%= link_to 'New Collection', new_collection_path %>
+
+-->
+<div class="row">
+  <% @collections.each do |collection| %>
+    <div class="col-xs-6 feature">
+      <div class="row">
+        <h1><%= collection.name %></h1>
+        <div class="col-xs-6">
+          <img class="img-responsive" src=<%= collection.imgurl %> alt="" />  
+        </div>
+        <p>
+          <%= collection.description %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
