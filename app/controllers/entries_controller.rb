@@ -14,17 +14,20 @@ class EntriesController < ApplicationController
 
   # GET /entries/new
   def new
+    @collection = Collection.find(params[:collection_id])
     @entry = Entry.new
   end
 
   # GET /entries/1/edit
   def edit
+    @collection = Collection.find(params[:collection_id])
   end
 
   # POST /entries
   # POST /entries.json
   def create
-    @entry = Entry.new(entry_params)
+    @collection = Collection.find(params[:collection_id])
+    @entry = @collection.entries.new(entry_params)
 
     respond_to do |format|
       if @entry.save

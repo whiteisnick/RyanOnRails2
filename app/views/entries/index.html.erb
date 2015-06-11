@@ -6,8 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Entry</th>
-      <th>Collection</th>
+      <th>Collection ID</th>
       <th>Description</th>
       <th>Imgurl</th>
       <th colspan="3"></th>
@@ -18,8 +17,7 @@
     <% @entries.each do |entry| %>
       <tr>
         <td><%= entry.name %></td>
-        <td><%= entry.entry %></td>
-        <td><%= entry.collection %></td>
+        <td><%= entry.collection_id %></td>
         <td><%= entry.description %></td>
         <td><%= entry.imgurl %></td>
         <td><%= link_to 'Show', entry %></td>

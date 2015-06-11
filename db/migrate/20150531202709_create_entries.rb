@@ -2,8 +2,7 @@ class CreateEntries < ActiveRecord::Migration
   def change
     create_table :entries do |t|
       t.string :name
-      t.integer :entry
-      t.integer :collection
+      t.integer :collection_id
       t.text :description
       t.string :imgurl
 

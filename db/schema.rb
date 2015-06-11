@@ -26,12 +26,11 @@ ActiveRecord::Schema.define(version: 20150531202709) do
 
   create_table "entries", force: :cascade do |t|
     t.string   "name"
-    t.integer  "entry"
-    t.integer  "collection"
+    t.integer  "collection_id"
     t.text     "description"
     t.string   "imgurl"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
